@@ -401,6 +401,8 @@ const typeChoice = ()=> {
     }
 }
 
+// ! ^ This function does not work 100% at the moment
+
 
 
 start()
