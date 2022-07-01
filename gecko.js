@@ -7,14 +7,23 @@ class gecko extends Animal {
         this.emotion = emotion
     }
 restOnHotPlate() {
-    this.hunger += 10
-    console.log(`${this.name} is now warming up.`)
+    return console.table({
+    name: this.name,
+    hunger: this.hunger += 10,
+    thirst: this.thirst += 10
+    })
+    //! console.log(`${this.name} is now warming up.`)
+    // return this
 }
 
 hideInCave() {
-    this.hunger += 10
-    this.thirst += 10
-    console.log(`${this.name} is now hiding in his cave`)
+    return console.table({
+    name: this.name,
+    hunger: this.hunger += 10,
+    thirst: this.thirst += 10
+    })
+    //! console.log(`${this.name} is now hiding in his cave`)
+    // return this
 }
 
 }

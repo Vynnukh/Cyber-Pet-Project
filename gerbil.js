@@ -8,17 +8,23 @@ class gerbil extends Animal {
     }
 
     manicRunAround() {
-        this.hunger += 10;
-        this.thirst += 10;
-        console.log(`${this.name} is manicly running around`)
-        return this
+        return console.table({
+        name: this.name,
+        hunger: this.hunger += 10,
+        thirst: this.thirst += 10
+        })
+        //! console.log(`${this.name} is manicly running around`)
+        // return this
     }
 
     toiletRoll() {
-        this.hunger += 10;
-        this.thirst += 10;
-        console.log(`${this.name} ran through the toilet roll a few times and then decided to chew on it.`)
-        return this
+        return console.table({
+        name:this.name,
+        hunger: this.hunger += 10,
+        thirst: this.thirst += 10
+        })
+        //! console.log(`${this.name} ran through the toilet roll a few times and then decided to chew on it.`)
+        // return this
     }
 }
 

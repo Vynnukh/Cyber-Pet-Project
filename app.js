@@ -358,12 +358,10 @@ const gerbilFn = async () => {
 
 
 const quitFn = async () => {
-
-
     const quitActivity = await inquirer.prompt({
         type: "list",
         name: "activity",
-        message: "?",
+        message: "Are you sure?",
         choices: [
             {
                 key: "y",
@@ -377,35 +375,11 @@ const quitFn = async () => {
             }
         ]
     })
-    if (quitActivity.activity == "yes") {
-        console.log("Are you sure, you will need to start again from scratch")
-        const sureActivity = await inquirer.prompt({
-            type: "list",
-            name: "activity",
-            message: "?",
-            choices: [
-                {
-                    key: "y",
-                    name: "Yes",
-                    value: "yes",
-                },
-                {
-                    key: "n",
-                    name: "No",
-                    value: "no",
-                }
-            ]
-        })
-        if (sureActivity.activity == "yes") {
-            console.log("Thank you for playing")
-        } else async ()=> {
-            console.log("Typechoice")
-            await typeChoice()
-        }
-        } else async ()=> {
-            console.log("Typechoice")
-            await typeChoice()
-    }
+    
+    if (quitActivity.activity === "yes") 
+        return true;
+        else return false;
+
 }
 
 const typeChoice = ()=> {

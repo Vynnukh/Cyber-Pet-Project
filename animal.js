@@ -5,17 +5,22 @@ class Animal {
         this.hunger = 0;
     }
     drinks(){
-        this.thirst -= 5;
-        this.hunger += 5;
-        console.log(`${this.name} has had a drink`)
-        return this;
+        return console.table({
+        name: this.name,
+        thirst: this.thirst -= 5,
+        hunger: this.hunger += 5
+        })
+        //! console.log(`${this.name} has had a drink`)
+        // return this;
     }
     eats(){
-        console.log(`${this.name} has eaten.`);
-        this.thirst += 10;
-        this.hunger -= 5;
-        
-        return this;
+        //! console.log(`${this.name} has eaten`)
+        return console.table({
+        name: this.name,
+        thirst: this.thirst += 10,
+        hunger: this.hunger -= 5
+        })
+        // return this;
     }
     stats(){
         return console.table({
