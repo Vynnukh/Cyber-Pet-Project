@@ -1,4 +1,3 @@
-
 const { Animal } = require("./animal.js");
 
 class cat extends Animal {
@@ -11,18 +10,21 @@ class cat extends Animal {
     playWithString() {
         return console.table({
         name: this.name,
-        thirst: this.thirst += 20,
-        hunger: this.hunger += 10,
-        boredom: this.boredom -= 10
+        hunger: this.hunger += 20,
+        thirst: this.thirst += 10,
+        boredom: this.boredom -= 10,
+        content: this.content += 20,
         })
         //! console.log(`${this.name}, plays with string, they are ${this.content} but soon get bored`)
         // return this;
     }
     scratchPost() {
         return console.table({
-            name: this.name,
-        content: this.content += 30,
-        thirst: this.thirst += 10
+        name: this.name,
+        hunger: this.hunger += 10,
+        thirst: this.thirst += 30,
+        boredom: this.boredom -= 10,
+        content: this.content += 20,
         })
         //! console.log(`${this.name}, scratches thier scratching post , they are ${this.content}`)
         // return this;

@@ -361,7 +361,7 @@ const quitFn = async () => {
     const quitActivity = await inquirer.prompt({
         type: "list",
         name: "activity",
-        message: "Are you sure?",
+        message: "Are you sure? you will need to start from scratch",
         choices: [
             {
                 key: "y",
@@ -375,29 +375,27 @@ const quitFn = async () => {
             }
         ]
     })
-    
     if (quitActivity.activity === "yes") 
         return true;
-        else return false;
-
+        else typeSwitch();
 }
 
-const typeChoice = ()=> {
-    if (myPetType == "cat") async () => {
-        console.log(myPetType)
-        await catFn()
-    }
-    else if (myPetType == "dog") async () => {
-        console.log(myPetType)
-        await dogFn()
-    }
-    else if (myPetType == "gecko") async () => {
-        console.log(myPetType)
-        await geckoFn()
-    }
-    else async () => {
-        console.log(myPetType)
-        await gerbilFn()
+const typeSwitch = async () => {
+    switch(myPetType){
+        case "cat":
+            await catFn()
+            break;
+        case "dog":
+            await dogFn()
+            break;
+        case "gecko":
+            await geckoFn()
+            break;
+        case "gerbil":
+            await gerbilFn()
+            break;
+        default:
+            console.log("something's fishy")
     }
 }
 
