@@ -1,8 +1,3 @@
-// const { playWithString, scratchPost } = require("./cat.js");
-// const { playFetch, chaseTail } = require("./dog.js");
-// const { restOnHotPlate, hideInCave } = require("./gecko.js");
-// const { manicRunAround, toiletRoll  } = require("./gerbil.js");
-
 const inquirer = require("inquirer"); 
 const { async } = require("rxjs");
 const {cat} = require("./cat.js")
